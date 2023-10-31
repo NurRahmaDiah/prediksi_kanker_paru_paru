@@ -64,19 +64,29 @@ df = pd.read_csv("Surver lung cancer.csv")
 ```python
 df.head()
 ```
-![deskripsi](deskripsi.JPG)
+![deskripsi](head.JPG)
+- Informasi datasets
+```python
+df.info()
+```
+![info](info.JPG)
 - Memeriksa apakah datasets yang saya pakai ada data null atau kosong
 ``` python
 sns.heatmap(df.isnull())
 ```
-![seaborndata](seaborn.JPG) <br>
+![seaborndata](heatmap.JPG) <br>
 Apabila tidak ada warna selain merah berarti data yang saya pakai aman tidak ada data null.
+- describe datasets
+``` python
+df.describe()
+```
+![describe](describe.JPG) <br>
 - Melihat tabel data exploration 
 ``` python
 plt.figure(figsize=(10,8))
 sns.heatmap(df.corr(), annot=True)
 ```
-![dataexploration](dataex.JPG)
+![dataexploration](heatmap2.JPG)
 - Import library skicit-learn untuk melakukan Split data training dan data testing
 ``` python
 from sklearn.model_selection import train_test_split
@@ -105,12 +115,12 @@ rfc = RandomForestClassifier(n_estimators=100,random_state=42)
 rfc.fit(x_train, y_train)
 rfc.score(x_test, y_test)
 ```
-![dataexploration](dataex.JPG)
+![dataexploration](score1.JPG)
 - hasil score seluruh data x dan y
 ``` python
 rfc.score(x, y)
 ```
-![dataexploration](dataex.JPG)
+![dataexploration](score2.JPG)
 - Membuat model inputan meggunakan array
 ``` python
 input_data = np.array([[1,22,1,2,2,2,2,2,2,2,2,2,2,2,1]])
@@ -121,7 +131,7 @@ else:
   result = "memiliki kemungkinan besar untuk mengidap Kanker Paru-Paru"
 print('Pasien', result)
 ```
-![inputanarray](inputan.JPG)
+![inputanarray](model.JPG)
 -  Save menggunakan pickle untuk melanjutkan ke tahap pembuatan aplikasi berbasis website menggunakan bantuan streamlit
 ``` python
 import pickle
