@@ -139,5 +139,6 @@ filename ='prediksi_kanker.sav'
 pickle.dump(rfc,open(filename,'wb'))
 ```
 ## DEPLOYMENT
-Ini adalah aplikasi prediksi penyakit kanker paru-paru berbasis website yang sudah kita bangun menggunakan streamlit [APLIKASI](https://prediksikankerparuparu.streamlit.app/) <br>
+Ini adalah aplikasi prediksi penyakit kanker paru-paru berbasis website yang sudah kita bangun menggunakan streamlit.
+<br> Berikut link streamlit : [APLIKASI](https://prediksikankerparuparu.streamlit.app/) <br>
 ![aplikasijadi](aplikasi.JPG)
